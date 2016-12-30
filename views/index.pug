@@ -3,3 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form(id='fUpload' method='post' action='/fileMeta' enctype='multipart/form-data')
+    | Submit a file to view it's size.
+    br
+    br
+    input(type='file' id='fFile' name='fFile')
+    input(type='submit' id='fSubmit')
