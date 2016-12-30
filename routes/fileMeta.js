@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
-var upload = multer({ dest : '../public/uploads'});
+var upload = multer();
 
 /* Send JSON response. */
 router.post('/', upload.single('fFile'), function(req, res, next){
